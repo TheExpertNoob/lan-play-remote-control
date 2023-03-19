@@ -78,6 +78,5 @@ if($_POST['submit'] == "Kill client")
 }
 else{}
 ?>
-</div>
 </body>
 </html>
