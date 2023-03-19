@@ -53,27 +53,31 @@ Switch&nbsp;LAN&nbsp;Servers
 <?php
 if($_POST['submit'] == "Start teknik 11451")
 {
-	pclose(popen("START lan-play-win64.exe --relay-server-addr lan.teknik.app:11451 --netif 1", "r"));
+	exec("START taskkill /F /im lan-play-win64.exe");
+	pclose(popen("START lan-play-win64.exe --relay-server-addr lan.teknik.app:11451", "r"));
 	echo nl2br("lan.teknik.app client has been started.");
 }
 if($_POST['submit'] == "Start joinsg 11453")
 {
-	pclose(popen("START lan-play-win64.exe  --relay-server-addr joinsg.net:11453 --netif 1", "r"));
+	exec("START taskkill /F /im lan-play-win64.exe");
+	pclose(popen("START lan-play-win64.exe  --relay-server-addr joinsg.net:11453", "r"));
 	echo nl2br("joinsg.net primary client has been started.");
 }
 if($_POST['submit'] == "Start joinsg 11451")
 {
-	pclose(popen("START lan-play-win64.exe  --relay-server-addr joinsg.net:11451 --netif 1", "r"));
+	exec("START taskkill /F /im lan-play-win64.exe");
+	pclose(popen("START lan-play-win64.exe  --relay-server-addr joinsg.net:11451", "r"));
 	echo nl2br("joinsg.net secondary client has been started.");
 }
 if($_POST['submit'] == "Start tekn0 11451")
 {
-	pclose(popen("START lan-play-win64.exe --relay-server-addr tekn0.net:11451 --netif 1", "r"));
+	exec("START taskkill /F /im lan-play-win64.exe");
+	pclose(popen("START lan-play-win64.exe --relay-server-addr tekn0.net:11451", "r"));
 	echo nl2br("tekn0.net client has been started.");
 }
 if($_POST['submit'] == "Kill client")
 {
-	pclose(popen("START taskkill /F /im lan-play-win64.exe", "r"));
+	exec("START taskkill /F /im lan-play-win64.exe");
 	echo nl2br("Client Killed.\r\nSelect another client.");
 }
 else{}
