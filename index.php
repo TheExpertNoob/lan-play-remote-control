@@ -1,44 +1,55 @@
 <?php error_reporting (E_ALL ^ E_NOTICE); ?>
+<?php
+  $bg = array_slice(scandir(walls), 2);
+  $i = rand(0, count($bg)-1); // generate random number size of the array
+  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+?>
 <html>
 <head>
 <meta charset='UTF-8'><meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 <style>
 html {
+	background: url('walls/<?php echo $selectedBg; ?>') no-repeat center fixed;     
+    background-size: cover;
 	height: 100%;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-	color: #a3a3a3;
+	/* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+	color: #ffffff;
 	text-align: center;
 }
 #title {
+	width: 100%;
+    height: auto;
 	left: 10px;
 	right: 10px;
 	text-align: center;
-	font-size: 10vi;
-	color: #a3a3a3;
+	color: #ffffff;
 	margin-top: 0px;
 }
 #content {
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 }
 #server {
 	font-size: 10vi;
-	background: #0000a3;
-	color: #a3a3a3;
+	background: #0000a37f;
+	color: #ffffff;
 }
 #kill {
 	font-size: 10vi;
-	background: #a30000;
-	color: #a3a3a3;
+	background: #a300007f;
+	color: #ffffff;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 </style>
 </head>
 <body>
 <div id="title">
-Switch&nbsp;LAN&nbsp;Servers
+<img src="SLP.png"></img>
 </div>
 <div id="content">
 <form method="post">
