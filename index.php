@@ -8,6 +8,8 @@
 <head>
 <meta charset='UTF-8'><meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<title>Switch LAN Play</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
 html {
 	background: url('walls/<?php echo $selectedBg; ?>') no-repeat center fixed;     
