@@ -1,3 +1,5 @@
+This is broken in my install of PHP 8.2.4
+
 # lan-play-remote-control
 A simple and dirty hack to connect and disconnect to Switch Lan Play servers.  
   
