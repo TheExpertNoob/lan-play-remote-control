@@ -1,6 +1,6 @@
 <?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <?php
-  $bg = array_slice(scandir(walls), 2);
+  $bg = array_slice(scandir("walls"), 2);
   $i = rand(0, count($bg)-1); // generate random number size of the array
   $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 ?>
@@ -55,20 +55,21 @@ img {
 </div>
 <div id="content">
 <form method="post">
-<p><input id="server" type="submit" name="submit" value="Start teknik 11451"></p>
+<p><input id="server" type="submit" name="submit" value="Start lanplay 11541"></p>
 <p><input id="server" type="submit" name="submit" value="Start joinsg 11451"></p>
 <p><input id="server" type="submit" name="submit" value="Start joinsg 11453"></p>
 <p><input id="server" type="submit" name="submit" value="Start tekn0 11451"></p>
+<p><input id="server" type="submit" name="submit" value="Start exabytes 11451"></p>
 <p>&nbsp;</p>
 <p><input id="kill" type="submit" name="submit" value="Kill client"></p>
 </form>
 </div>
 <?php
-if($_POST['submit'] == "Start teknik 11451")
+if($_POST['submit'] == "Start lanplay 11541")
 {
 	exec("START taskkill /F /im lan-play-win64.exe");
-	pclose(popen("START lan-play-win64.exe --relay-server-addr lan.teknik.app:11451", "r"));
-	echo nl2br("lan.teknik.app client has been started.");
+	pclose(popen("START lan-play-win64.exe --relay-server-addr join.lanplay.app:11541", "r"));
+	echo nl2br("join.lanplay.app client has been started.");
 }
 if($_POST['submit'] == "Start joinsg 11453")
 {
@@ -87,6 +88,12 @@ if($_POST['submit'] == "Start tekn0 11451")
 	exec("START taskkill /F /im lan-play-win64.exe");
 	pclose(popen("START lan-play-win64.exe --relay-server-addr tekn0.net:11451", "r"));
 	echo nl2br("tekn0.net client has been started.");
+}
+if($_POST['submit'] == "Start exabytes 11451")
+{
+	exec("START taskkill /F /im lan-play-win64.exe");
+	pclose(popen("START lan-play-win64.exe --relay-server-addr switch.exabytes.space:11451", "r"));
+	echo nl2br("switch.exabytes.space client has been started.");
 }
 if($_POST['submit'] == "Kill client")
 {
